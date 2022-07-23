@@ -31,7 +31,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 		return "Hello World Raghu!";
 	}
 	@RequestMapping("/db")
-	String sayDatabase() {
+	String sayDatabase() throws Exception {
 		 log.info("Loading application properties");
         Properties properties = new Properties();
         properties.load(DemoApplication.class.getClassLoader().getResourceAsStream("application.properties"));
